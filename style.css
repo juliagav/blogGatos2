@@ -1,0 +1,240 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-font-smothing:antialiased;
+    -moz-osx-font-smothing:grayscale;
+}
+
+:root {
+    font-family: "Mulish", sans-serif;
+    font-size: 62.5%;    
+    --color-base-white:hsl(0, 0%, 100%);
+    --color-base-blue-100:hsl(189, 11%, 87%);
+    --color-base-blue-900: hsl(195, 91%, 25%);
+    --color-base-gray-300:hsl(var(--hue), 60%, 58%);
+    --color-base-gray-900:hsl(var(--hue), 60%, 30%);
+   }
+   
+   html, body, input {      
+      font-family: "Mulish", sans-serif;
+   }
+
+ body {
+    font-size:1.6rem;
+    background-color: var(--color-base-gray-100);
+   }
+   
+   header {
+    display: flex;
+    align-items: center;
+    width: 43rem;
+}
+ 
+header form {
+   flex:1;
+}
+
+ .input-wrapper label {
+   width: .1rem;
+   height:.1rem;
+   overflow: hidden;
+   position: absolute;
+   color: var(--color-base-white);
+} 
+   
+.input-wrapper input {
+   width: 100%;
+   padding:1.6rem;
+   background-color:var(--color-base-blue-100);
+   border: 0;   
+   border-radius: .6rem;
+   font-size: 1.6rem;
+   font-weight: 600;
+   opacity: 0.56;
+}
+
+.input-wrapper input::placeholder {
+   text-align:center;
+   padding:2.6rem 1.6rem;
+   font-weight:600;
+   color:var(--color-base-white);
+}
+
+
+  header {
+     height:7.2rem;
+     background-color:var(--color-base-blue-900);
+     max-width: 45rem;
+     margin-inline: auto;
+     box-sizing: content-box;
+   }
+   
+   .avatar, .woman {
+      width: 4rem;
+      height:4rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 1.2rem 2.8rem 1.2rem 2.6rem;
+   }
+   
+   
+   .container {      
+      width: min(112rem, 100%);
+   }
+
+   .container h1{
+      font-size: 2.4rem;
+      font-weight: bold;
+      width:34.2rem;
+      height:3.8rem;
+      margin:3.1rem 66.5rem .8rem 2.2rem;
+   }
+
+   .container p{
+      font-size:1.6rem;
+      width:38.2rem;
+      margin: 3.1rem 2.6rem 3.4rem;
+   }
+   
+  
+   main {
+      max-width: 45rem;
+      margin-inline: auto;
+      box-sizing: content-box;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-base-gray-100);
+   }
+
+
+   .cat{
+      width:100%;
+      height:21.9rem;
+      border-radius: 0rem 0rem 0.5rem 0.55rem;
+   }
+   
+   .cat:hover{
+      filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+   }
+   
+   .ok{
+      margin-left:2.2rem;
+   }
+   
+   .nok{
+      margin-left: 1.2rem;
+   }
+   
+   .ok:hover{
+      filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+      transform: scale(1.1) rotate(-0.5deg); 
+   }
+   
+   .nok:hover{
+      filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+      transform: scale(1.1) rotate(-0.5deg); 
+   }
+   
+   .segundo-paragrafo {
+      margin-top: 2rem;
+   }
+
+   .gallery h1 {
+      margin-left: 2.2rem;
+;
+   }
+
+   ul {
+      list-style: none;
+   }
+
+   ul li{
+      max-width: max-content;
+     
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center
+
+   }
+
+
+   .details h2 p {
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      
+   }
+
+footer {
+   max-width: 45rem;
+   margin-inline: auto;
+   box-sizing: content-box;
+   border:0;
+   align-items: center;
+   text-align:center;
+   padding:2.6rem 1.6rem;
+   margin-top:3.9rem;
+   font-weight:600;
+   background-color: var(--color-base-blue-900);
+   color:var(--color-base-white);
+
+}
+
+/*GALLERY*/
+
+   .details p {
+   width:21.5rem;
+   display: flex;
+   align-items: flex-start;
+   gap:2.2rem;
+}
+
+
+
+.item img {
+   width:15.1rem;
+   height: 8.4rem;
+   margin:3.2rem 1.6rem 3.2rem 2.2rem;
+   object-fit: cover;
+   transition: filter 500ms  ease-out, transform 100ms ease-in
+}
+
+.item img:hover {
+   filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+   transform: scale(1.1) rotate(-0.5deg); 
+}
+
+header {
+  --startY:-100%
+   animation: move .2s;
+}
+
+footer {
+   --starty:100%
+   animation: move .2s;
+}
+
+@keyframes move {
+   from {
+      transform: translateY(var(--startY));
+   }
+}
+
+
+.item {
+   --delay:4s
+animation: appear .4s .var(var--delay) backwards;
+}
+
+@keyframes appear {
+   0% {
+      opacity: 0;
+      transform: scale(0.8);
+   }
+
+  50% {
+   transform: scale(1.2);
+  }
+
+}
